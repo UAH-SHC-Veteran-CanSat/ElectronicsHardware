@@ -933,11 +933,7 @@ Wire Wire Line
 Wire Wire Line
 	12200 7600 12150 7600
 Wire Wire Line
-	10750 7300 10300 7300
-Wire Wire Line
 	10750 7200 10300 7200
-Text GLabel 10300 7300 0    50   Input ~ 0
-GPS_RX-MCU_TX
 Text GLabel 10300 7200 0    50   Input ~ 0
 GPS_TX-MCU_RX
 Text GLabel 10300 8100 0    50   Input ~ 0
@@ -1372,8 +1368,6 @@ Wire Wire Line
 Connection ~ 10600 5900
 Wire Wire Line
 	10600 5900 10750 5900
-Wire Wire Line
-	10300 7300 10300 7250
 Wire Notes Line
 	3300 3150 3300 6000
 Text Notes 3300 3050 0    50   ~ 0
@@ -1696,177 +1690,6 @@ Text GLabel 12450 8000 2    50   Input ~ 0
 SERVO_TCL
 Wire Wire Line
 	12450 8000 12150 8000
-$Comp
-L CanSatParts:CAM-M8 U1
-U 1 1 5BED7355
-P 8950 2400
-F 0 "U1" H 8925 3515 50  0000 C CNN
-F 1 "CAM-M8" H 8925 3424 50  0000 C CNN
-F 2 "OSD335x-KiCad-master:CAM-M8" H 8950 2400 50  0001 C CNN
-F 3 "" H 8950 2400 50  0001 C CNN
-	1    8950 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:L_Small L3
-U 1 1 5BEE0582
-P 7950 2700
-F 0 "L3" V 8135 2700 50  0000 C CNN
-F 1 "L_Small" V 8044 2700 50  0000 C CNN
-F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 7950 2700 50  0001 C CNN
-F 3 "~" H 7950 2700 50  0001 C CNN
-	1    7950 2700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:L_Small L4
-U 1 1 5BEE0715
-P 7950 2800
-F 0 "L4" V 8135 2800 50  0000 C CNN
-F 1 "BLM15HD102SN1" V 7850 2600 50  0000 C CNN
-F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 7950 2800 50  0001 C CNN
-F 3 "~" H 7950 2800 50  0001 C CNN
-	1    7950 2800
-	0    -1   -1   0   
-$EndComp
-Text GLabel 7850 2800 0    50   Input ~ 0
-GPS_RX-MCU_TX
-Text GLabel 7850 2700 0    50   Input ~ 0
-GPS_TX-MCU_RX
-Wire Wire Line
-	8050 1800 7950 1800
-Wire Wire Line
-	7950 1800 7950 1900
-Wire Wire Line
-	7950 1900 8050 1900
-Wire Wire Line
-	8050 1600 7150 1600
-Wire Wire Line
-	7150 1600 7150 1700
-Wire Wire Line
-	7150 3500 8250 3500
-Wire Wire Line
-	9950 3500 9950 2500
-Wire Wire Line
-	9950 1600 9800 1600
-Wire Wire Line
-	8050 1700 7150 1700
-Connection ~ 7150 1700
-Wire Wire Line
-	7150 1700 7150 2000
-Wire Wire Line
-	8050 2000 7150 2000
-Connection ~ 7150 2000
-Wire Wire Line
-	7150 2000 7150 2100
-Wire Wire Line
-	8050 2100 7150 2100
-Connection ~ 7150 2100
-Wire Wire Line
-	7150 2100 7150 2300
-Wire Wire Line
-	8050 2300 7150 2300
-Connection ~ 7150 2300
-Wire Wire Line
-	7150 2300 7150 2400
-Wire Wire Line
-	8050 2400 7150 2400
-Connection ~ 7150 2400
-Wire Wire Line
-	7150 2400 7150 3500
-Wire Wire Line
-	8750 3300 8750 3500
-Connection ~ 8750 3500
-Wire Wire Line
-	8750 3500 9150 3500
-Wire Wire Line
-	9150 3300 9150 3500
-Connection ~ 9150 3500
-Wire Wire Line
-	9150 3500 9950 3500
-Wire Wire Line
-	9800 1700 9950 1700
-Connection ~ 9950 1700
-Wire Wire Line
-	9950 1700 9950 1600
-Wire Wire Line
-	9800 1800 9950 1800
-Connection ~ 9950 1800
-Wire Wire Line
-	9950 1800 9950 1700
-Wire Wire Line
-	9800 1900 9950 1900
-Connection ~ 9950 1900
-Wire Wire Line
-	9950 1900 9950 1800
-Wire Wire Line
-	9800 2400 9950 2400
-Connection ~ 9950 2400
-Wire Wire Line
-	9950 2400 9950 1900
-Wire Wire Line
-	9800 2500 9950 2500
-Connection ~ 9950 2500
-Wire Wire Line
-	9950 2500 9950 2400
-Wire Wire Line
-	9800 2000 10050 2000
-Wire Wire Line
-	10050 2000 10050 2100
-Wire Wire Line
-	10050 2100 9800 2100
-Wire Wire Line
-	10050 2100 10050 2800
-Wire Wire Line
-	10050 2800 9800 2800
-Connection ~ 10050 2100
-$Comp
-L Device:C_Small C13
-U 1 1 5BF9EC57
-P 10050 3200
-F 0 "C13" H 10142 3246 50  0000 L CNN
-F 1 "4.7uF" H 10142 3155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10050 3200 50  0001 C CNN
-F 3 "~" H 10050 3200 50  0001 C CNN
-	1    10050 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10050 2800 10050 3100
-Connection ~ 10050 2800
-Wire Wire Line
-	10050 3300 10050 3500
-Wire Wire Line
-	10050 3500 9950 3500
-Connection ~ 9950 3500
-Wire Wire Line
-	10050 2000 10050 1250
-Connection ~ 10050 2000
-$Comp
-L power:+3.3V #PWR0103
-U 1 1 5BFC5523
-P 10050 1250
-F 0 "#PWR0103" H 10050 1100 50  0001 C CNN
-F 1 "+3.3V" H 10065 1423 50  0000 C CNN
-F 2 "" H 10050 1250 50  0001 C CNN
-F 3 "" H 10050 1250 50  0001 C CNN
-	1    10050 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0118
-U 1 1 5BFC5742
-P 8250 3500
-F 0 "#PWR0118" H 8250 3250 50  0001 C CNN
-F 1 "GND" H 8255 3327 50  0000 C CNN
-F 2 "" H 8250 3500 50  0001 C CNN
-F 3 "" H 8250 3500 50  0001 C CNN
-	1    8250 3500
-	1    0    0    -1  
-$EndComp
-Connection ~ 8250 3500
-Wire Wire Line
-	8250 3500 8750 3500
 Wire Notes Line
 	10400 4800 7050 4800
 Wire Notes Line
@@ -1973,61 +1796,43 @@ Wire Notes Line
 	17350 3200 15500 3200
 Text Notes 16250 3150 0    50   ~ 0
 MOUNTING
-$Comp
-L Connector_Generic:Conn_01x04 J9
-U 1 1 5BEEA1F1
-P 7500 3700
-F 0 "J9" V 7466 3412 50  0000 R CNN
-F 1 "Conn_01x04" V 7375 3412 50  0000 R CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 7500 3700 50  0001 C CNN
-F 3 "~" H 7500 3700 50  0001 C CNN
-	1    7500 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0122
-U 1 1 5BF12040
-P 7600 3900
-F 0 "#PWR0122" H 7600 3750 50  0001 C CNN
-F 1 "+3.3V" H 7615 4073 50  0000 C CNN
-F 2 "" H 7600 3900 50  0001 C CNN
-F 3 "" H 7600 3900 50  0001 C CNN
-	1    7600 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0123
-U 1 1 5BF398CF
-P 7700 3900
-F 0 "#PWR0123" H 7700 3650 50  0001 C CNN
-F 1 "GND" H 7705 3727 50  0000 C CNN
-F 2 "" H 7700 3900 50  0001 C CNN
-F 3 "" H 7700 3900 50  0001 C CNN
-	1    7700 3900
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	7050 750  7050 4800
 Wire Notes Line
 	10400 750  10400 4800
-Wire Wire Line
-	8050 2700 8050 2750
-Wire Wire Line
-	8050 2750 7900 2750
-Wire Wire Line
-	7900 2750 7900 3400
-Wire Wire Line
-	7900 3400 7300 3400
-Wire Wire Line
-	7300 3400 7300 3900
-Wire Wire Line
-	7300 3900 7400 3900
-Connection ~ 8050 2700
-Wire Wire Line
-	8050 2800 8050 4150
-Wire Wire Line
-	8050 4150 7500 4150
-Wire Wire Line
-	7500 4150 7500 3900
-Connection ~ 8050 2800
+$Comp
+L Connector:Conn_01x03_Female J9
+U 1 1 5BFA0A7E
+P 8100 1550
+F 0 "J9" V 8040 1362 50  0000 R CNN
+F 1 "Conn_01x03_Female" V 7949 1362 50  0000 R CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 8100 1550 50  0001 C CNN
+F 3 "~" H 8100 1550 50  0001 C CNN
+	1    8100 1550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8000 1750 3    50   Input ~ 0
+GPS_TX-MCU_RX
+$Comp
+L power:GND #PWR0103
+U 1 1 5BFC4AB2
+P 8100 1750
+F 0 "#PWR0103" H 8100 1500 50  0001 C CNN
+F 1 "GND" H 8105 1577 50  0000 C CNN
+F 2 "" H 8100 1750 50  0001 C CNN
+F 3 "" H 8100 1750 50  0001 C CNN
+	1    8100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 5BFC4B59
+P 8200 1750
+F 0 "#PWR0118" H 8200 1600 50  0001 C CNN
+F 1 "+3.3V" H 8215 1923 50  0000 C CNN
+F 2 "" H 8200 1750 50  0001 C CNN
+F 3 "" H 8200 1750 50  0001 C CNN
+	1    8200 1750
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
