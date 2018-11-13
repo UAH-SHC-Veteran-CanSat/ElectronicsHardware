@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:WinSat_201819_Protoboard_Rev0.0.2-cache
 EELAYER 26 0
 EELAYER END
 $Descr A0 46811 33110
@@ -15,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SAM-M8Q-u-blox G1
+L CanSatParts:SAM-M8Q G1
 U 1 1 5BE5ABE0
 P 8100 1900
 F 0 "G1" H 8791 1746 50  0000 L CNN
@@ -26,7 +25,7 @@ F 3 "" H 7950 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:BMP38X-BMP38X-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U4
+L CanSatParts:BMP38X U4
 U 1 1 5BE5C299
 P 2250 2050
 F 0 "U4" H 2200 2828 50  0000 C CNN
@@ -102,11 +101,6 @@ Connection ~ 1550 1900
 Wire Wire Line
 	1550 1600 1550 850 
 Connection ~ 1550 850 
-Wire Wire Line
-	1550 850  2300 850 
-Wire Wire Line
-	2300 850  2850 850 
-Connection ~ 2300 850 
 Connection ~ 2850 1850
 Wire Wire Line
 	1750 2200 1200 2200
@@ -134,7 +128,7 @@ Wire Notes Line
 Text Notes 1800 700  0    50   ~ 0
 BAROMETER_BMP388
 $Comp
-L MCU_Microchip_ATmega:ATxmega128A4-AU U9
+L MCU_Microchip_ATmega:ATxmega128A4U-AU U9
 U 1 1 5BE6121F
 P 11450 7200
 F 0 "U9" H 11450 5714 50  0000 C CNN
@@ -145,7 +139,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8069-8-and-16-bit-AVR
 	1    0    0    -1  
 $EndComp
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:TPS82150-TPS82150 P1
+L CanSatParts:TPS82150 P1
 U 1 1 5BE6181D
 P 5150 1600
 F 0 "P1" H 5175 2115 50  0000 C CNN
@@ -246,7 +240,6 @@ Wire Wire Line
 	5650 2500 5650 1850
 Wire Wire Line
 	5650 1850 6000 1850
-Connection ~ 5650 1850
 $Comp
 L Device:R_Small R14
 U 1 1 5BE64569
@@ -469,7 +462,7 @@ Wire Notes Line
 Text Notes 8100 700  0    50   ~ 0
 GPS_SAM-M8Q
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:BNO055-BNO055-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue I1
+L CanSatParts:BNO055 I1
 U 1 1 5BE81AAB
 P 12900 1950
 F 0 "I1" H 13100 1700 50  0000 L CNN
@@ -716,7 +709,7 @@ Wire Notes Line
 Text Notes 12600 700  0    50   ~ 0
 IMU_BNO055
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:XBEE_PRO900-XBEE-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U10
+L CanSatParts:XBEE_PRO900 U10
 U 1 1 5BEE0A17
 P 16800 1700
 F 0 "U10" H 16825 2565 50  0000 C CNN
@@ -899,10 +892,10 @@ $EndComp
 Text GLabel 1250 3900 3    50   Input ~ 0
 BAT_POS
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U1
+L Device:Q_NMOS_GSD Q1
 U 1 1 5BF34496
 P 2150 3650
-F 0 "U1" V 2150 3350 50  0000 C CNN
+F 0 "Q1" V 2150 3350 50  0000 C CNN
 F 1 "SSM3K329R" V 2524 3625 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 2150 3650 50  0001 C CNN
 F 3 "" H 2150 3650 50  0001 C CNN
@@ -911,19 +904,17 @@ F 3 "" H 2150 3650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1500 3600 1500 3650
-Wire Wire Line
-	1500 3650 1800 3650
 Text GLabel 2550 3850 2    50   Input ~ 0
 MOSFET0_GPIO
 $Comp
 L power:GND #PWR02
 U 1 1 5BF45F0F
-P 2550 3450
-F 0 "#PWR02" H 2550 3200 50  0001 C CNN
-F 1 "GND" V 2555 3277 50  0000 C CNN
-F 2 "" H 2550 3450 50  0001 C CNN
-F 3 "" H 2550 3450 50  0001 C CNN
-	1    2550 3450
+P 2550 3550
+F 0 "#PWR02" H 2550 3300 50  0001 C CNN
+F 1 "GND" V 2555 3377 50  0000 C CNN
+F 2 "" H 2550 3550 50  0001 C CNN
+F 3 "" H 2550 3550 50  0001 C CNN
+	1    2550 3550
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
@@ -939,32 +930,19 @@ F 3 "~" H 1400 4600 50  0001 C CNN
 	1    1400 4600
 	0    -1   -1   0   
 $EndComp
-$Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U2
-U 1 1 5BF6121A
-P 2150 4850
-F 0 "U2" V 2150 4550 50  0000 C CNN
-F 1 "SSM3K329R" V 2524 4825 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2150 4850 50  0001 C CNN
-F 3 "" H 2150 4850 50  0001 C CNN
-	1    2150 4850
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	1500 4800 1500 4850
-Wire Wire Line
-	1500 4850 1800 4850
 Text GLabel 2550 5050 2    50   Input ~ 0
 MOSFET1_GPIO
 $Comp
 L power:GND #PWR04
 U 1 1 5BF61224
-P 2550 4650
-F 0 "#PWR04" H 2550 4400 50  0001 C CNN
-F 1 "GND" V 2555 4477 50  0000 C CNN
-F 2 "" H 2550 4650 50  0001 C CNN
-F 3 "" H 2550 4650 50  0001 C CNN
-	1    2550 4650
+P 2550 4750
+F 0 "#PWR04" H 2550 4500 50  0001 C CNN
+F 1 "GND" V 2555 4577 50  0000 C CNN
+F 2 "" H 2550 4750 50  0001 C CNN
+F 3 "" H 2550 4750 50  0001 C CNN
+	1    2550 4750
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
@@ -982,32 +960,19 @@ F 3 "~" H 1400 5800 50  0001 C CNN
 $EndComp
 Text GLabel 1400 4050 3    50   Input ~ 0
 3.3V
-$Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U3
-U 1 1 5BF66088
-P 2150 6050
-F 0 "U3" V 2150 5750 50  0000 C CNN
-F 1 "SSM3K329R" V 2524 6025 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2150 6050 50  0001 C CNN
-F 3 "" H 2150 6050 50  0001 C CNN
-	1    2150 6050
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	1500 6000 1500 6050
-Wire Wire Line
-	1500 6050 1800 6050
 Text GLabel 2550 6250 2    50   Input ~ 0
 MOSFET2_GPIO
 $Comp
 L power:GND #PWR06
 U 1 1 5BF66092
-P 2550 5850
-F 0 "#PWR06" H 2550 5600 50  0001 C CNN
-F 1 "GND" V 2555 5677 50  0000 C CNN
-F 2 "" H 2550 5850 50  0001 C CNN
-F 3 "" H 2550 5850 50  0001 C CNN
-	1    2550 5850
+P 2550 5950
+F 0 "#PWR06" H 2550 5700 50  0001 C CNN
+F 1 "GND" V 2555 5777 50  0000 C CNN
+F 2 "" H 2550 5950 50  0001 C CNN
+F 3 "" H 2550 5950 50  0001 C CNN
+	1    2550 5950
 	0    -1   -1   0   
 $EndComp
 Wire Notes Line
@@ -1040,7 +1005,7 @@ F 3 "" H 3750 1950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:JTAG-6PIN-JTAG_6PIN-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U8
+L CanSatParts:JTAG-6PIN U8
 U 1 1 5BF81CD8
 P 10050 6050
 F 0 "U8" H 10050 5635 50  0000 C CNN
@@ -1082,10 +1047,6 @@ F 3 "" H 11450 8600 50  0001 C CNN
 	1    11450 8600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2300 850  2300 1450
-Wire Wire Line
-	2100 1250 2100 1450
 Wire Wire Line
 	950  2050 1750 2050
 Wire Wire Line
@@ -1373,17 +1334,6 @@ F 3 "~" H 3750 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R15
-U 1 1 5C178A7F
-P 6050 3850
-F 0 "R15" H 6109 3896 50  0000 L CNN
-F 1 "400 OHM" V 5950 3750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6050 3850 50  0001 C CNN
-F 3 "~" H 6050 3850 50  0001 C CNN
-	1    6050 3850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:LED D1
 U 1 1 5C178C54
 P 3750 4100
@@ -1405,95 +1355,10 @@ F 3 "~" H 3750 5150 50  0001 C CNN
 	1    3750 5150
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Device:LED D3
-U 1 1 5C19AE6C
-P 5800 3850
-F 0 "D3" V 5838 3733 50  0000 R CNN
-F 1 "LED" V 5747 3733 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5800 3850 50  0001 C CNN
-F 3 "~" H 5800 3850 50  0001 C CNN
-	1    5800 3850
-	-1   0    0    1   
-$EndComp
 Text GLabel 3750 5000 1    50   Input ~ 0
 3.3V
 Text GLabel 16000 1750 0    50   Input ~ 0
 N_RESET_IN
-Text GLabel 4900 3650 0    50   Input ~ 0
-XBEE_TX-MCU_RX
-$Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U5
-U 1 1 5C1FA00B
-P 5300 3850
-F 0 "U5" V 4835 3825 50  0000 C CNN
-F 1 "SSM3K329R" V 4926 3825 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 3850 50  0001 C CNN
-F 3 "" H 5300 3850 50  0001 C CNN
-	1    5300 3850
-	0    1    1    0   
-$EndComp
-Text GLabel 4900 4050 0    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR017
-U 1 1 5C20B434
-P 6150 3850
-F 0 "#PWR017" H 6150 3600 50  0001 C CNN
-F 1 "GND" V 6155 3722 50  0000 R CNN
-F 2 "" H 6150 3850 50  0001 C CNN
-F 3 "" H 6150 3850 50  0001 C CNN
-	1    6150 3850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R16
-U 1 1 5C21CDF3
-P 6050 4750
-F 0 "R16" H 6109 4796 50  0000 L CNN
-F 1 "400 OHM" V 5950 4650 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6050 4750 50  0001 C CNN
-F 3 "~" H 6050 4750 50  0001 C CNN
-	1    6050 4750
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D4
-U 1 1 5C21CDFA
-P 5800 4750
-F 0 "D4" V 5838 4633 50  0000 R CNN
-F 1 "LED" V 5747 4633 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5800 4750 50  0001 C CNN
-F 3 "~" H 5800 4750 50  0001 C CNN
-	1    5800 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U6
-U 1 1 5C21CE02
-P 5300 4750
-F 0 "U6" V 4835 4725 50  0000 C CNN
-F 1 "SSM3K329R" V 4926 4725 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 4750 50  0001 C CNN
-F 3 "" H 5300 4750 50  0001 C CNN
-	1    5300 4750
-	0    1    1    0   
-$EndComp
-Text GLabel 4900 4950 0    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR018
-U 1 1 5C21CE0A
-P 6150 4750
-F 0 "#PWR018" H 6150 4500 50  0001 C CNN
-F 1 "GND" V 6155 4622 50  0000 R CNN
-F 2 "" H 6150 4750 50  0001 C CNN
-F 3 "" H 6150 4750 50  0001 C CNN
-	1    6150 4750
-	0    -1   -1   0   
-$EndComp
-Text GLabel 4900 4550 0    50   Input ~ 0
-GPS_TX-MCU_RX
 $Comp
 L power:GND #PWR011
 U 1 1 5C22E3CA
@@ -1662,60 +1527,8 @@ Wire Wire Line
 Connection ~ 10600 5900
 Wire Wire Line
 	10600 5900 10750 5900
-Text Notes 5550 4300 0    50   ~ 0
-NOTE: Pull Up/Down Resistors \nexist on actual circuits.
-Text Notes 5550 3550 0    50   ~ 0
-P-channel Depletion
 Wire Wire Line
 	10300 7300 10300 7250
-$Comp
-L Device:R_Small R17
-U 1 1 5C2D0AA3
-P 6050 5600
-F 0 "R17" H 6109 5646 50  0000 L CNN
-F 1 "400 OHM" V 5950 5500 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 6050 5600 50  0001 C CNN
-F 3 "~" H 6050 5600 50  0001 C CNN
-	1    6050 5600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:LED D5
-U 1 1 5C2D0AAA
-P 5800 5600
-F 0 "D5" V 5838 5483 50  0000 R CNN
-F 1 "LED" V 5747 5483 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5800 5600 50  0001 C CNN
-F 3 "~" H 5800 5600 50  0001 C CNN
-	1    5800 5600
-	-1   0    0    1   
-$EndComp
-$Comp
-L WinSat_201819_Protoboard_Rev0.0.2-rescue:SSM3K329R-SSM3K329R-_saved_WinSat_201819_Protoboard_Rev0.0.1-rescue U7
-U 1 1 5C2D0AB1
-P 5300 5600
-F 0 "U7" V 4835 5575 50  0000 C CNN
-F 1 "SSM3K329R" V 4926 5575 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 5600 50  0001 C CNN
-F 3 "" H 5300 5600 50  0001 C CNN
-	1    5300 5600
-	0    1    1    0   
-$EndComp
-Text GLabel 4900 5800 0    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR019
-U 1 1 5C2D0AB9
-P 6150 5600
-F 0 "#PWR019" H 6150 5350 50  0001 C CNN
-F 1 "GND" V 6155 5472 50  0000 R CNN
-F 2 "" H 6150 5600 50  0001 C CNN
-F 3 "" H 6150 5600 50  0001 C CNN
-	1    6150 5600
-	0    -1   -1   0   
-$EndComp
-Text GLabel 4900 5400 0    50   Input ~ 0
-SDA_BAR
 Wire Notes Line
 	3300 3150 3300 6000
 Wire Notes Line
@@ -1732,16 +1545,71 @@ Text Notes 2000 5250 0    50   ~ 0
 N-Type
 Text Notes 2000 6450 0    50   ~ 0
 N-Type
-Text Notes 5500 4500 0    50   ~ 0
-P-channel Depletion
-Text Notes 5500 5350 0    50   ~ 0
-P-channel Depletion
-Text Notes 4300 3400 0    50   ~ 0
-NOT SSM3K329R MOSFETS\nSIMILAR FOOTPRINT
 Connection ~ 6300 1850
 Wire Wire Line
 	6300 1850 6400 1850
 Wire Wire Line
 	2850 850  2850 1850
 Connection ~ 6400 1850
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 5BEE0721
+P 2150 4850
+F 0 "Q2" V 2150 4550 50  0000 C CNN
+F 1 "SSM3K329R" V 2524 4825 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2150 4850 50  0001 C CNN
+F 3 "" H 2150 4850 50  0001 C CNN
+	1    2150 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 3650 1500 3650
+Wire Wire Line
+	2150 3850 2550 3850
+Wire Wire Line
+	2350 3550 2550 3550
+Wire Wire Line
+	1500 4850 1750 4850
+Wire Wire Line
+	2150 5050 2550 5050
+Wire Wire Line
+	2550 4750 2350 4750
+$Comp
+L Device:Q_NMOS_GSD Q3
+U 1 1 5BF34BDA
+P 2150 6050
+F 0 "Q3" V 2150 5750 50  0000 C CNN
+F 1 "SSM3K329R" V 2524 6025 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2150 6050 50  0001 C CNN
+F 3 "" H 2150 6050 50  0001 C CNN
+	1    2150 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 5950 2350 5950
+Wire Wire Line
+	2550 6250 2150 6250
+Wire Wire Line
+	1500 6050 1750 6050
+Wire Wire Line
+	1750 3650 1750 3550
+Wire Wire Line
+	1750 3550 1950 3550
+Wire Wire Line
+	1950 4750 1750 4750
+Wire Wire Line
+	1750 4750 1750 4850
+Wire Wire Line
+	1950 5950 1750 5950
+Wire Wire Line
+	1750 5950 1750 6050
+Wire Wire Line
+	1550 850  2300 850 
+Wire Wire Line
+	2300 1350 2300 850 
+Connection ~ 2300 850 
+Wire Wire Line
+	2300 850  2850 850 
+Wire Wire Line
+	2100 1250 2100 1350
 $EndSCHEMATC
