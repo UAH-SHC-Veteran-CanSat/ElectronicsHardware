@@ -1,4 +1,4 @@
 (sym_lib_table
   (lib (name WinSat_201819_Protoboard_Rev0.0.2-rescue)(type Legacy)(uri ${KIPRJMOD}/WinSat_201819_Protoboard_Rev0.0.2-rescue.lib)(options "")(descr ""))
-  (lib (name CanSatParts)(type Legacy)(uri /Users/Thomas/Desktop/CanSat/Hardware/ElectronicsHardware/CanSatParts.lib)(options "")(descr ""))
+  (lib (name CanSatParts)(type Legacy)(uri ${KIPRJMOD}/CanSatParts.lib)(options "")(descr ""))
 )
