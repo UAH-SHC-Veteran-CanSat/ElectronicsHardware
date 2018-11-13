@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CanSatParts:SAM-M8Q G1
-U 1 1 5BE5ABE0
-P 8100 1900
-F 0 "G1" H 8791 1746 50  0000 L CNN
-F 1 "SAM-M8Q" H 8791 1655 50  0000 L CNN
-F 2 "OSD335x-KiCad-master:SAM-M8Q" H 7950 1850 50  0001 C CNN
-F 3 "" H 7950 1850 50  0001 C CNN
-	1    8100 1900
-	1    0    0    -1  
-$EndComp
-$Comp
 L CanSatParts:BMP38X U4
 U 1 1 5BE5C299
 P 2250 2050
@@ -339,123 +328,8 @@ Wire Notes Line
 	6900 750  3650 750 
 Text Notes 5100 700  0    50   ~ 0
 POWER_TPS82150
-Wire Wire Line
-	7250 2900 7450 2900
-Wire Wire Line
-	8850 2900 8850 2300
-Wire Wire Line
-	8850 1300 8250 1300
-Wire Wire Line
-	7250 1300 7250 1900
-Wire Wire Line
-	7250 2200 7350 2200
-Connection ~ 7250 2200
-Wire Wire Line
-	7250 2200 7250 2300
-Wire Wire Line
-	7250 2300 7350 2300
-Connection ~ 7250 2300
-Wire Wire Line
-	7250 2300 7250 2900
-Wire Wire Line
-	7250 1900 7350 1900
-Connection ~ 7250 1900
-Wire Wire Line
-	7250 1900 7250 2200
-Wire Wire Line
-	7850 2800 7850 2900
-Connection ~ 7850 2900
-Wire Wire Line
-	7850 2900 8250 2900
-Wire Wire Line
-	8250 2800 8250 2900
-Connection ~ 8250 2900
-Wire Wire Line
-	8250 2900 8850 2900
-Wire Wire Line
-	8750 2300 8850 2300
-Connection ~ 8850 2300
-Wire Wire Line
-	8850 2300 8850 1900
-Wire Wire Line
-	8750 1900 8850 1900
-Connection ~ 8850 1900
-Wire Wire Line
-	8850 1900 8850 1300
-Wire Wire Line
-	8250 1400 8250 1300
-Connection ~ 8250 1300
-Wire Wire Line
-	8250 1300 7850 1300
-Wire Wire Line
-	7850 1400 7850 1300
-Connection ~ 7850 1300
-Wire Wire Line
-	7850 1300 7250 1300
-Wire Wire Line
-	7350 2100 7150 2100
-Wire Wire Line
-	7350 2000 7150 2000
-Wire Wire Line
-	7150 1000 7150 1150
-Connection ~ 7150 2000
-Wire Wire Line
-	7150 2000 7150 2100
-$Comp
-L power:GND #PWR022
-U 1 1 5BE7375A
-P 7450 2900
-F 0 "#PWR022" H 7450 2650 50  0001 C CNN
-F 1 "GND" H 7455 2727 50  0000 C CNN
-F 2 "" H 7450 2900 50  0001 C CNN
-F 3 "" H 7450 2900 50  0001 C CNN
-	1    7450 2900
-	1    0    0    -1  
-$EndComp
-Connection ~ 7450 2900
-Wire Wire Line
-	7450 2900 7850 2900
-Wire Wire Line
-	8150 1400 8150 1150
-Wire Wire Line
-	8150 1150 7150 1150
-Connection ~ 7150 1150
-Wire Wire Line
-	7150 1150 7150 2000
-Wire Wire Line
-	8750 2000 9200 2000
-Wire Wire Line
-	9200 1750 9200 2000
-Wire Wire Line
-	8750 2100 9200 2100
-Wire Wire Line
-	9200 2100 9200 2300
-Text GLabel 9200 1750 2    50   Input ~ 0
-GPS_RX-MCU_TX
-Text GLabel 9200 2300 2    50   Input ~ 0
-GPS_TX-MCU_RX
-Wire Wire Line
-	7950 1400 7950 900 
-Wire Wire Line
-	7950 900  8100 900 
-Wire Wire Line
-	8050 1400 8050 1050
-Wire Wire Line
-	8050 1050 8200 1050
-Text GLabel 8200 1050 2    50   Input ~ 0
-GPS_RESET
-Text GLabel 8100 900  2    50   Input ~ 0
-GPS_INT
-Wire Notes Line
-	7050 3150 10100 3150
-Wire Notes Line
-	10100 3150 10100 750 
-Wire Notes Line
-	10100 750  7050 750 
-Wire Notes Line
-	7050 750  7050 3150
 Text Notes 8100 700  0    50   ~ 0
-GPS_SAM-M8Q
+GPS_CAM-M8
 $Comp
 L CanSatParts:BNO055 I1
 U 1 1 5BE81AAB
@@ -1604,17 +1478,6 @@ F 3 "" H 6600 1850 50  0001 C CNN
 $EndComp
 Connection ~ 6600 1850
 $Comp
-L power:+3.3V #PWR0103
-U 1 1 5BEAEBC9
-P 7150 1000
-F 0 "#PWR0103" H 7150 850 50  0001 C CNN
-F 1 "+3.3V" H 7165 1173 50  0000 C CNN
-F 2 "" H 7150 1000 50  0001 C CNN
-F 3 "" H 7150 1000 50  0001 C CNN
-	1    7150 1000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR0104
 U 1 1 5BEAEE18
 P 11150 2000
@@ -1833,4 +1696,183 @@ Text GLabel 12450 8000 2    50   Input ~ 0
 SERVO_TCL
 Wire Wire Line
 	12450 8000 12150 8000
+$Comp
+L CanSatParts:CAM-M8 U1
+U 1 1 5BED7355
+P 8950 2400
+F 0 "U1" H 8925 3515 50  0000 C CNN
+F 1 "CAM-M8" H 8925 3424 50  0000 C CNN
+F 2 "OSD335x-KiCad-master:CAM-M8" H 8950 2400 50  0001 C CNN
+F 3 "" H 8950 2400 50  0001 C CNN
+	1    8950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L3
+U 1 1 5BEE0582
+P 7950 2700
+F 0 "L3" V 8135 2700 50  0000 C CNN
+F 1 "L_Small" V 8044 2700 50  0000 C CNN
+F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 7950 2700 50  0001 C CNN
+F 3 "~" H 7950 2700 50  0001 C CNN
+	1    7950 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L_Small L4
+U 1 1 5BEE0715
+P 7950 2800
+F 0 "L4" V 8135 2800 50  0000 C CNN
+F 1 "BLM15HD102SN1" V 7850 2600 50  0000 C CNN
+F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 7950 2800 50  0001 C CNN
+F 3 "~" H 7950 2800 50  0001 C CNN
+	1    7950 2800
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7850 2800 0    50   Input ~ 0
+GPS_RX-MCU_TX
+Text GLabel 7850 2700 0    50   Input ~ 0
+GPS_TX-MCU_RX
+Wire Wire Line
+	8050 1800 7950 1800
+Wire Wire Line
+	7950 1800 7950 1900
+Wire Wire Line
+	7950 1900 8050 1900
+Wire Wire Line
+	8050 1600 7150 1600
+Wire Wire Line
+	7150 1600 7150 1700
+Wire Wire Line
+	7150 3500 8250 3500
+Wire Wire Line
+	9950 3500 9950 2500
+Wire Wire Line
+	9950 1600 9800 1600
+Wire Wire Line
+	8050 1700 7150 1700
+Connection ~ 7150 1700
+Wire Wire Line
+	7150 1700 7150 2000
+Wire Wire Line
+	8050 2000 7150 2000
+Connection ~ 7150 2000
+Wire Wire Line
+	7150 2000 7150 2100
+Wire Wire Line
+	8050 2100 7150 2100
+Connection ~ 7150 2100
+Wire Wire Line
+	7150 2100 7150 2300
+Wire Wire Line
+	8050 2300 7150 2300
+Connection ~ 7150 2300
+Wire Wire Line
+	7150 2300 7150 2400
+Wire Wire Line
+	8050 2400 7150 2400
+Connection ~ 7150 2400
+Wire Wire Line
+	7150 2400 7150 3500
+Wire Wire Line
+	8750 3300 8750 3500
+Connection ~ 8750 3500
+Wire Wire Line
+	8750 3500 9150 3500
+Wire Wire Line
+	9150 3300 9150 3500
+Connection ~ 9150 3500
+Wire Wire Line
+	9150 3500 9950 3500
+Wire Wire Line
+	9800 1700 9950 1700
+Connection ~ 9950 1700
+Wire Wire Line
+	9950 1700 9950 1600
+Wire Wire Line
+	9800 1800 9950 1800
+Connection ~ 9950 1800
+Wire Wire Line
+	9950 1800 9950 1700
+Wire Wire Line
+	9800 1900 9950 1900
+Connection ~ 9950 1900
+Wire Wire Line
+	9950 1900 9950 1800
+Wire Wire Line
+	9800 2400 9950 2400
+Connection ~ 9950 2400
+Wire Wire Line
+	9950 2400 9950 1900
+Wire Wire Line
+	9800 2500 9950 2500
+Connection ~ 9950 2500
+Wire Wire Line
+	9950 2500 9950 2400
+Wire Wire Line
+	9800 2000 10050 2000
+Wire Wire Line
+	10050 2000 10050 2100
+Wire Wire Line
+	10050 2100 9800 2100
+Wire Wire Line
+	10050 2100 10050 2800
+Wire Wire Line
+	10050 2800 9800 2800
+Connection ~ 10050 2100
+$Comp
+L Device:C_Small C13
+U 1 1 5BF9EC57
+P 10050 3200
+F 0 "C13" H 10142 3246 50  0000 L CNN
+F 1 "4.7uF" H 10142 3155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10050 3200 50  0001 C CNN
+F 3 "~" H 10050 3200 50  0001 C CNN
+	1    10050 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 2800 10050 3100
+Connection ~ 10050 2800
+Wire Wire Line
+	10050 3300 10050 3500
+Wire Wire Line
+	10050 3500 9950 3500
+Connection ~ 9950 3500
+Wire Wire Line
+	10050 2000 10050 1250
+Connection ~ 10050 2000
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5BFC5523
+P 10050 1250
+F 0 "#PWR0103" H 10050 1100 50  0001 C CNN
+F 1 "+3.3V" H 10065 1423 50  0000 C CNN
+F 2 "" H 10050 1250 50  0001 C CNN
+F 3 "" H 10050 1250 50  0001 C CNN
+	1    10050 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5BFC5742
+P 8250 3500
+F 0 "#PWR0118" H 8250 3250 50  0001 C CNN
+F 1 "GND" H 8255 3327 50  0000 C CNN
+F 2 "" H 8250 3500 50  0001 C CNN
+F 3 "" H 8250 3500 50  0001 C CNN
+	1    8250 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 8250 3500
+Wire Wire Line
+	8250 3500 8750 3500
+Wire Notes Line
+	10400 750  10400 4050
+Wire Notes Line
+	10400 4050 7050 4050
+Wire Notes Line
+	7050 750  10400 750 
+Wire Notes Line
+	7050 750  7050 4050
 $EndSCHEMATC
