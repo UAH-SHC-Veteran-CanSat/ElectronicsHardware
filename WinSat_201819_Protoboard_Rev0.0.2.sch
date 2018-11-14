@@ -15,96 +15,38 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CanSatParts:BMP38X U4
-U 1 1 5BE5C299
-P 2250 2050
-F 0 "U4" H 2200 2828 50  0000 C CNN
-F 1 "BMP38X" H 2200 2737 50  0000 C CNN
-F 2 "OSD335x-KiCad-master:BMP388" H 1400 2850 50  0001 C CNN
-F 3 "" H 1400 2850 50  0001 C CNN
-	1    2250 2050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C2
 U 1 1 5BE5C4DD
-P 2850 1950
-F 0 "C2" H 2942 1996 50  0000 L CNN
-F 1 "100nF" H 2942 1905 50  0000 L CNN
-F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 2850 1950 50  0001 C CNN
-F 3 "~" H 2850 1950 50  0001 C CNN
-	1    2850 1950
+P 2700 1800
+F 0 "C2" H 2792 1846 50  0000 L CNN
+F 1 "100nF" H 2792 1755 50  0000 L CNN
+F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 2700 1800 50  0001 C CNN
+F 3 "~" H 2700 1800 50  0001 C CNN
+	1    2700 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5BE5C533
-P 1550 1700
-F 0 "C1" H 1642 1746 50  0000 L CNN
-F 1 "100nF" H 1642 1655 50  0000 L CNN
-F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 1550 1700 50  0001 C CNN
-F 3 "~" H 1550 1700 50  0001 C CNN
-	1    1550 1700
+P 2300 1800
+F 0 "C1" H 2392 1846 50  0000 L CNN
+F 1 "100nF" H 2392 1755 50  0000 L CNN
+F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 2300 1800 50  0001 C CNN
+F 3 "~" H 2300 1800 50  0001 C CNN
+	1    2300 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5BE5C794
-P 1550 1900
-F 0 "#PWR01" H 1550 1650 50  0001 C CNN
-F 1 "GND" H 1650 1800 50  0000 C CNN
-F 2 "" H 1550 1900 50  0001 C CNN
-F 3 "" H 1550 1900 50  0001 C CNN
-	1    1550 1900
+P 2000 2300
+F 0 "#PWR01" H 2000 2050 50  0001 C CNN
+F 1 "GND" H 2100 2200 50  0000 C CNN
+F 2 "" H 2000 2300 50  0001 C CNN
+F 3 "" H 2000 2300 50  0001 C CNN
+	1    2000 2300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR08
-U 1 1 5BE5C7C2
-P 2850 2300
-F 0 "#PWR08" H 2850 2050 50  0001 C CNN
-F 1 "GND" H 2855 2127 50  0000 C CNN
-F 2 "" H 2850 2300 50  0001 C CNN
-F 3 "" H 2850 2300 50  0001 C CNN
-	1    2850 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2650 2050 2850 2050
-Wire Wire Line
-	2650 2200 2850 2200
-Wire Wire Line
-	2850 2200 2850 2050
-Connection ~ 2850 2050
-Wire Wire Line
-	2850 2200 2850 2300
-Connection ~ 2850 2200
-Wire Wire Line
-	2650 1900 2650 1850
-Wire Wire Line
-	2650 1850 2850 1850
-Wire Wire Line
-	1750 1900 1550 1900
-Wire Wire Line
-	1550 1800 1550 1900
-Connection ~ 1550 1900
-Wire Wire Line
-	1550 1600 1550 850 
-Connection ~ 1550 850 
-Connection ~ 2850 1850
-Wire Wire Line
-	1750 2200 1200 2200
-Wire Wire Line
-	1200 2200 1200 850 
-Wire Wire Line
-	1200 2200 1200 2650
-Wire Wire Line
-	1200 2650 2100 2650
-Connection ~ 1200 2200
-Text GLabel 950  2050 3    50   Input ~ 0
-SDA_BAR
-Text GLabel 2100 1250 0    50   Input ~ 0
-SCL_BAR
 Wire Notes Line
 	850  750  850  2800
 Wire Notes Line
@@ -114,7 +56,7 @@ Wire Notes Line
 Wire Notes Line
 	3450 750  850  750 
 Text Notes 1800 700  0    50   ~ 0
-BAROMETER_BMP388
+BAROMETER_BMP280
 $Comp
 L MCU_Microchip_ATmega:ATxmega128A4U-AU U9
 U 1 1 5BE6121F
@@ -524,10 +466,6 @@ Wire Wire Line
 Connection ~ 13100 1350
 Wire Wire Line
 	13100 1350 13100 1700
-Text GLabel 14150 1350 2    50   Input ~ 0
-IMU_SDA
-Text GLabel 14150 2150 2    50   Input ~ 0
-IMU_SCL
 Wire Wire Line
 	13650 2350 14100 2350
 Wire Wire Line
@@ -869,10 +807,6 @@ F 3 "" H 11450 8600 50  0001 C CNN
 	1    11450 8600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	950  2050 1750 2050
-Wire Wire Line
-	1200 850  1550 850 
 Text Notes 1400 2900 0    50   ~ 0
 Pull-up resistors found on IMU data lines.
 Text GLabel 12150 6200 2    50   Input ~ 0
@@ -881,22 +815,6 @@ Text GLabel 12150 6400 2    50   Input ~ 0
 VOLTDIV_ADC
 Text GLabel 12150 6600 2    50   Input ~ 0
 TEMP_SENSE-ADC
-Wire Wire Line
-	12150 7500 12650 7500
-Wire Wire Line
-	12650 7500 12650 7400
-Wire Wire Line
-	13100 7450 13600 7450
-Wire Wire Line
-	13600 7450 13600 7550
-Text GLabel 13600 7450 2    50   Input ~ 0
-SCL_BAR
-Text GLabel 12650 7400 2    50   Input ~ 0
-SDA_BAR
-Text GLabel 13600 7550 2    50   Input ~ 0
-IMU_SCL
-Text GLabel 12650 7500 2    50   Input ~ 0
-IMU_SDA
 Wire Wire Line
 	10750 7200 10300 7200
 Text GLabel 10300 7200 0    50   Input ~ 0
@@ -1313,8 +1231,6 @@ N-Type
 Connection ~ 6300 1850
 Wire Wire Line
 	6300 1850 6400 1850
-Wire Wire Line
-	2850 850  2850 1400
 $Comp
 L Device:Q_NMOS_GSD Q2
 U 1 1 5BEE0721
@@ -1367,29 +1283,17 @@ Wire Wire Line
 	1950 5950 1750 5950
 Wire Wire Line
 	1750 5950 1750 6050
-Wire Wire Line
-	1550 850  2300 850 
-Wire Wire Line
-	2300 1350 2300 850 
-Connection ~ 2300 850 
-Wire Wire Line
-	2300 850  2850 850 
-Wire Wire Line
-	2100 1250 2100 1350
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5BEAE7F4
-P 2850 1400
-F 0 "#PWR0101" H 2850 1250 50  0001 C CNN
-F 1 "+3.3V" V 2865 1528 50  0000 L CNN
-F 2 "" H 2850 1400 50  0001 C CNN
-F 3 "" H 2850 1400 50  0001 C CNN
-	1    2850 1400
-	0    1    1    0   
+P 2000 1400
+F 0 "#PWR0101" H 2000 1250 50  0001 C CNN
+F 1 "+3.3V" V 2015 1528 50  0000 L CNN
+F 2 "" H 2000 1400 50  0001 C CNN
+F 3 "" H 2000 1400 50  0001 C CNN
+	1    2000 1400
+	1    0    0    -1  
 $EndComp
-Connection ~ 2850 1400
-Wire Wire Line
-	2850 1400 2850 1850
 $Comp
 L power:+3.3V #PWR0102
 U 1 1 5BEAE9A7
@@ -1673,7 +1577,7 @@ F 3 "" H 5050 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole MK1
+L Mechanical:MountingHole MK1
 U 1 1 5BEC0F4D
 P 16150 3450
 F 0 "MK1" H 16250 3496 50  0000 L CNN
@@ -1684,7 +1588,7 @@ F 3 "" H 16150 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole MK2
+L Mechanical:MountingHole MK2
 U 1 1 5BEC10FC
 P 16150 3650
 F 0 "MK2" H 16250 3696 50  0000 L CNN
@@ -1695,7 +1599,7 @@ F 3 "" H 16150 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole MK3
+L Mechanical:MountingHole MK3
 U 1 1 5BEC11C1
 P 16150 3850
 F 0 "MK3" H 16250 3896 50  0000 L CNN
@@ -1804,10 +1708,6 @@ Text GLabel 12150 7700 2    50   Input ~ 0
 FTDI_OLOG_TX-MCU_RX
 Text GLabel 12150 7800 2    50   Input ~ 0
 FTDI_OLOG_RX-MCU_TX
-Wire Wire Line
-	13100 7600 13100 7450
-Wire Wire Line
-	12150 7600 13100 7600
 $Comp
 L Device:C_Small C13
 U 1 1 5BF137DE
@@ -2121,4 +2021,73 @@ Wire Wire Line
 Wire Wire Line
 	5850 5650 5950 5650
 Connection ~ 5850 5650
+$Comp
+L Sensor_Pressure:BMP280 U3
+U 1 1 5BF25C7E
+P 2000 1900
+F 0 "U3" H 1700 2250 50  0000 L CNN
+F 1 "BMP280" H 1600 1650 50  0000 L CNN
+F 2 "Housings_LGA:Bosch_LGA-8_2.5x2.5mm_Pitch0.65mm_ClockwisePinNumbering" H 2000 1200 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001-19.pdf" H 2000 1900 50  0001 C CNN
+	1    2000 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 12150 7500 2    50   Input ~ 0
+SDA1
+Text GLabel 12150 7600 2    50   Input ~ 0
+SCL1
+Text GLabel 14150 2150 2    50   Input ~ 0
+SCL1
+Text GLabel 14150 1350 2    50   Input ~ 0
+SDA1
+Text GLabel 1600 1700 0    50   Input ~ 0
+SCL1
+Text GLabel 1600 1800 0    50   Input ~ 0
+SDA1
+Wire Wire Line
+	2000 1500 2000 1400
+Wire Wire Line
+	2000 1400 2100 1400
+Wire Wire Line
+	2700 1400 2700 1700
+Wire Wire Line
+	2300 1700 2300 1400
+Connection ~ 2300 1400
+Wire Wire Line
+	2300 1400 2700 1400
+Wire Wire Line
+	2100 1500 2100 1400
+Connection ~ 2100 1400
+Wire Wire Line
+	2100 1400 2300 1400
+Connection ~ 2000 1400
+Wire Wire Line
+	2700 1900 2700 2300
+Wire Wire Line
+	2700 2300 2300 2300
+Wire Wire Line
+	2000 2300 2000 2200
+Wire Wire Line
+	2100 2200 2100 2300
+Connection ~ 2100 2300
+Wire Wire Line
+	2100 2300 2000 2300
+Wire Wire Line
+	2300 1900 2300 2300
+Connection ~ 2300 2300
+Wire Wire Line
+	2300 2300 2100 2300
+Connection ~ 2000 2300
+Wire Wire Line
+	1600 2000 1200 2000
+Wire Wire Line
+	1200 2000 1200 1400
+Wire Wire Line
+	1200 1400 2000 1400
+Wire Wire Line
+	2000 2300 1300 2300
+Wire Wire Line
+	1300 2300 1300 1900
+Wire Wire Line
+	1300 1900 1600 1900
 $EndSCHEMATC
