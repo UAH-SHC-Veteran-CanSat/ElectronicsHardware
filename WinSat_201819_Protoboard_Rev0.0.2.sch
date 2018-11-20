@@ -1519,96 +1519,6 @@ Wire Notes Line
 	7050 750  10400 750 
 Text Notes 5650 4400 0    50   ~ 0
 ESD PROTECTION
-Text GLabel 4750 5250 1    50   Input ~ 0
-BAT_POS
-$Comp
-L Device:R_Small R17
-U 1 1 5BECCCAF
-P 4750 5350
-F 0 "R17" H 4809 5396 50  0000 L CNN
-F 1 "1M" H 4809 5305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 4750 5350 50  0001 C CNN
-F 3 "~" H 4750 5350 50  0001 C CNN
-	1    4750 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0119
-U 1 1 5BECCD77
-P 4750 5450
-F 0 "#PWR0119" H 4750 5200 50  0001 C CNN
-F 1 "GND" H 4755 5277 50  0000 C CNN
-F 2 "" H 4750 5450 50  0001 C CNN
-F 3 "" H 4750 5450 50  0001 C CNN
-	1    4750 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0120
-U 1 1 5BECCE23
-P 5050 5250
-F 0 "#PWR0120" H 5050 5100 50  0001 C CNN
-F 1 "+3.3V" H 5065 5423 50  0000 C CNN
-F 2 "" H 5050 5250 50  0001 C CNN
-F 3 "" H 5050 5250 50  0001 C CNN
-	1    5050 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R27
-U 1 1 5BECCF4E
-P 5050 5350
-F 0 "R27" H 5109 5396 50  0000 L CNN
-F 1 "1M" H 5109 5305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 5050 5350 50  0001 C CNN
-F 3 "~" H 5050 5350 50  0001 C CNN
-	1    5050 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0121
-U 1 1 5BECD009
-P 5050 5450
-F 0 "#PWR0121" H 5050 5200 50  0001 C CNN
-F 1 "GND" H 5055 5277 50  0000 C CNN
-F 2 "" H 5050 5450 50  0001 C CNN
-F 3 "" H 5050 5450 50  0001 C CNN
-	1    5050 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MK1
-U 1 1 5BEC0F4D
-P 16150 3450
-F 0 "MK1" H 16250 3496 50  0000 L CNN
-F 1 "Mounting_Hole" H 16250 3405 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3450 50  0001 C CNN
-F 3 "" H 16150 3450 50  0001 C CNN
-	1    16150 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MK2
-U 1 1 5BEC10FC
-P 16150 3650
-F 0 "MK2" H 16250 3696 50  0000 L CNN
-F 1 "Mounting_Hole" H 16250 3605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3650 50  0001 C CNN
-F 3 "" H 16150 3650 50  0001 C CNN
-	1    16150 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole MK3
-U 1 1 5BEC11C1
-P 16150 3850
-F 0 "MK3" H 16250 3896 50  0000 L CNN
-F 1 "Mounting_Hole" H 16250 3805 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3850 50  0001 C CNN
-F 3 "" H 16150 3850 50  0001 C CNN
-	1    16150 3850
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	15500 3200 15500 4200
 Wire Notes Line
@@ -1760,12 +1670,12 @@ Wire Notes Line
 $Comp
 L Connector:Conn_01x02_Female J4
 U 1 1 5BEDFAC8
-P 6250 5250
-F 0 "J4" V 6097 5298 50  0000 L CNN
-F 1 "Conn_01x02_Female" V 6400 5150 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6250 5250 50  0001 C CNN
-F 3 "~" H 6250 5250 50  0001 C CNN
-	1    6250 5250
+P 6250 4750
+F 0 "J4" V 6097 4798 50  0000 L CNN
+F 1 "Conn_01x02_Female" V 6400 4650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6250 4750 50  0001 C CNN
+F 3 "~" H 6250 4750 50  0001 C CNN
+	1    6250 4750
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1802,8 +1712,6 @@ F 3 "~" H 5750 5650 50  0001 C CNN
 	1    5750 5650
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6350 5450 6350 5500
 Wire Wire Line
 	6350 5500 5650 5500
 Wire Wire Line
@@ -2090,4 +1998,91 @@ Wire Wire Line
 	1300 2300 1300 1900
 Wire Wire Line
 	1300 1900 1600 1900
+Wire Wire Line
+	6250 4950 6250 5450
+Wire Wire Line
+	6350 4950 6350 5500
+$Comp
+L Connector:USB_B_Micro J11
+U 1 1 5BF629E0
+P 1450 9750
+F 0 "J11" H 1505 10217 50  0000 C CNN
+F 1 "USB_B_Micro" H 1505 10126 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1600 9700 50  0001 C CNN
+F 3 "~" H 1600 9700 50  0001 C CNN
+	1    1450 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 10150 1350 10150
+Wire Wire Line
+	1350 10150 1350 10200
+Connection ~ 1350 10150
+$Comp
+L power:GND #PWR0124
+U 1 1 5BF7F16E
+P 1350 10200
+F 0 "#PWR0124" H 1350 9950 50  0001 C CNN
+F 1 "GND" H 1355 10027 50  0000 C CNN
+F 2 "" H 1350 10200 50  0001 C CNN
+F 3 "" H 1350 10200 50  0001 C CNN
+	1    1350 10200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2150 9550 2    50   Input ~ 0
+BAT_POS
+Wire Notes Line
+	850  9150 850  10550
+Wire Notes Line
+	850  10550 2200 10550
+Wire Notes Line
+	2800 10550 2800 9150
+Wire Notes Line
+	2200 9150 850  9150
+Text Notes 1150 9100 0    50   ~ 0
+UMBILICAL_POWER
+$Comp
+L pspice:DIODE D4
+U 1 1 5BFAD830
+P 1950 9550
+F 0 "D4" H 1950 9815 50  0000 C CNN
+F 1 "DIODE" H 1950 9724 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 1950 9550 50  0001 C CNN
+F 3 "" H 1950 9550 50  0001 C CNN
+	1    1950 9550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole MK1
+U 1 1 5BFAF23A
+P 16150 3400
+F 0 "MK1" H 16250 3446 50  0000 L CNN
+F 1 "Mounting_Hole" H 16250 3355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3400 50  0001 C CNN
+F 3 "" H 16150 3400 50  0001 C CNN
+	1    16150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole MK2
+U 1 1 5BFAF2E6
+P 16150 3650
+F 0 "MK2" H 16250 3696 50  0000 L CNN
+F 1 "Mounting_Hole" H 16250 3605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3650 50  0001 C CNN
+F 3 "" H 16150 3650 50  0001 C CNN
+	1    16150 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Mounting_Hole MK3
+U 1 1 5BFAF38A
+P 16150 3900
+F 0 "MK3" H 16250 3946 50  0000 L CNN
+F 1 "Mounting_Hole" H 16250 3855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3900 50  0001 C CNN
+F 3 "" H 16150 3900 50  0001 C CNN
+	1    16150 3900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
