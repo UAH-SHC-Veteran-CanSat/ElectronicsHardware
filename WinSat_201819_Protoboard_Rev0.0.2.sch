@@ -1713,7 +1713,7 @@ Wire Wire Line
 	6750 7200 6750 7300
 Connection ~ 6750 7200
 $Comp
-L CanSatParts:LTC4361 U1
+L WinSat_201819_Protoboard_Rev0.0.2-rescue:LTC4361-CanSatParts U1
 U 1 1 5BF9349F
 P 5350 7250
 F 0 "U1" H 5350 7715 50  0000 C CNN
