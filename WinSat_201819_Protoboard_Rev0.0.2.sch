@@ -68,17 +68,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8069-8-and-16-bit-AVR
 	1    11450 7200
 	1    0    0    -1  
 $EndComp
-$Comp
-L CanSatParts:TPS82150 P1
-U 1 1 5BE6181D
-P 5150 1600
-F 0 "P1" H 5175 2115 50  0000 C CNN
-F 1 "TPS82150" H 5175 2024 50  0000 C CNN
-F 2 "OSD335x-KiCad-master:TPS82150" H 5150 1600 50  0001 C CNN
-F 3 "" H 5150 1600 50  0001 C CNN
-	1    5150 1600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4700 1550 4500 1550
 Wire Wire Line
@@ -188,27 +177,8 @@ Wire Wire Line
 	5900 1700 5900 1650
 Wire Wire Line
 	5900 1650 6000 1650
-Wire Wire Line
-	5650 1550 5650 1500
-$Comp
-L Device:R_Small R18
-U 1 1 5BE660C0
-P 6400 1650
-F 0 "R18" H 6459 1696 50  0000 L CNN
-F 1 "100k" H 6459 1605 50  0000 L CNN
-F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 6400 1650 50  0001 C CNN
-F 3 "~" H 6400 1650 50  0001 C CNN
-	1    6400 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 1500 6400 1550
-Wire Wire Line
-	6400 1850 6400 1750
 Text Notes 6050 1250 0    50   ~ 0
 1mOhm
-Wire Wire Line
-	5650 1500 6400 1500
 Wire Wire Line
 	5650 1700 5900 1700
 Wire Wire Line
@@ -436,7 +406,7 @@ Wire Wire Line
 Wire Wire Line
 	11350 2350 11750 2350
 Wire Wire Line
-	11750 2250 11300 2250
+	11750 2250 11500 2250
 Wire Wire Line
 	11350 900  11300 900 
 Connection ~ 11350 900 
@@ -588,7 +558,7 @@ L Device:R_Small R25
 U 1 1 5BF1C0C8
 P 20450 1100
 F 0 "R25" V 20254 1100 50  0000 C CNN
-F 1 "66K" V 20345 1100 50  0000 C CNN
+F 1 "7.15K" V 20345 1100 50  0000 C CNN
 F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 20450 1100 50  0001 C CNN
 F 3 "~" H 20450 1100 50  0001 C CNN
 	1    20450 1100
@@ -816,8 +786,8 @@ VOLTDIV_ADC
 Text GLabel 12150 6600 2    50   Input ~ 0
 TEMP_SENSE-ADC
 Wire Wire Line
-	10750 7200 10300 7200
-Text GLabel 10300 7200 0    50   Input ~ 0
+	12150 8100 12600 8100
+Text GLabel 12600 8100 2    50   Input ~ 0
 GPS_TX-MCU_RX
 Text GLabel 10300 8100 0    50   Input ~ 0
 XBEE_TX-MCU_RX
@@ -1229,8 +1199,6 @@ N-Type
 Text Notes 2000 6450 0    50   ~ 0
 N-Type
 Connection ~ 6300 1850
-Wire Wire Line
-	6300 1850 6400 1850
 $Comp
 L Device:Q_NMOS_GSD Q2
 U 1 1 5BEE0721
@@ -1336,17 +1304,6 @@ F 1 "+3.3V" V 18315 1428 50  0000 L CNN
 F 2 "" H 18300 1300 50  0001 C CNN
 F 3 "" H 18300 1300 50  0001 C CNN
 	1    18300 1300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0108
-U 1 1 5BEB009F
-P 19950 1100
-F 0 "#PWR0108" H 19950 950 50  0001 C CNN
-F 1 "+3.3V" V 19965 1228 50  0000 L CNN
-F 2 "" H 19950 1100 50  0001 C CNN
-F 3 "" H 19950 1100 50  0001 C CNN
-	1    19950 1100
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1509,10 +1466,10 @@ F 3 "" H 5200 3500 50  0001 C CNN
 $EndComp
 Text GLabel 5000 3500 0    50   Input ~ 0
 SERVO_TCL
-Text GLabel 12450 8000 2    50   Input ~ 0
+Text GLabel 10450 7100 0    50   Input ~ 0
 SERVO_TCL
 Wire Wire Line
-	12450 8000 12150 8000
+	10450 7100 10750 7100
 Wire Notes Line
 	10400 4050 7050 4050
 Wire Notes Line
@@ -1673,7 +1630,7 @@ U 1 1 5BEDFAC8
 P 6250 4750
 F 0 "J4" V 6097 4798 50  0000 L CNN
 F 1 "Conn_01x02_Female" V 6400 4650 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6250 4750 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 6250 4750 50  0001 C CNN
 F 3 "~" H 6250 4750 50  0001 C CNN
 	1    6250 4750
 	0    -1   -1   0   
@@ -1903,9 +1860,6 @@ Wire Notes Line
 Wire Notes Line
 	7750 4500 4450 4500
 Wire Wire Line
-	6400 1850 6750 1850
-Connection ~ 6400 1850
-Wire Wire Line
 	6250 6150 6300 6150
 $Comp
 L pspice:DIODE D3
@@ -2083,6 +2037,42 @@ F 1 "Mounting_Hole" H 16250 3855 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 16150 3900 50  0001 C CNN
 F 3 "" H 16150 3900 50  0001 C CNN
 	1    16150 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 6400 4850 0    50   ~ 0
+BATTERY
+Text GLabel 19950 1100 0    50   Input ~ 0
+BAT_POS
+$Comp
+L Device:C_Small C16
+U 1 1 5BFE9533
+P 11500 2150
+F 0 "C16" V 11729 2150 50  0000 C CNN
+F 1 "100nF" V 11400 2200 50  0000 C CNN
+F 2 "OSD335x-KiCad-master:Not_Broken_0402" H 11500 2150 50  0001 C CNN
+F 3 "~" H 11500 2150 50  0001 C CNN
+	1    11500 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 11500 2250
+Wire Wire Line
+	11500 2250 11300 2250
+Wire Wire Line
+	11600 2150 11600 2050
+Wire Wire Line
+	11600 2050 11500 2050
+Connection ~ 11600 2150
+Wire Wire Line
+	6300 1850 6750 1850
+$Comp
+L CanSatParts:TPS82150 P1
+U 1 1 5BE6181D
+P 5150 1600
+F 0 "P1" H 5175 2115 50  0000 C CNN
+F 1 "TPS82150" H 5175 2024 50  0000 C CNN
+F 2 "OSD335x-KiCad-master:TPS82150" H 5150 1600 50  0001 C CNN
+F 3 "" H 5150 1600 50  0001 C CNN
+	1    5150 1600
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
