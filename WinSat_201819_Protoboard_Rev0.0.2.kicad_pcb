@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.0-rc2-129-g72b49accc)")
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.1)-4")
 
   (general
     (thickness 1.6)
@@ -60,6 +60,7 @@
     (pad_size 1.5 1.5)
     (pad_drill 0.6)
     (pad_to_mask_clearance 0)
+    (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
     (visible_elements 7FFDFFFF)
     (pcbplotparams
@@ -88,7 +89,7 @@
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory ../../../Desktop/))
+      (outputdirectory "../../../Desktop/"))
   )
 
   (net 0 "")
@@ -1755,7 +1756,7 @@
     (tags resistor)
     (path /5C178691)
     (attr smd)
-    (fp_text reference R12 (at -10.6194 2.6332) (layer F.SilkS)
+    (fp_text reference R12 (at -2.3114 -11.557) (layer F.SilkS)
       (effects (font (size 0.5 0.5) (thickness 0.08)))
     )
     (fp_text value "400 OHM" (at 0 1.17) (layer F.Fab)
@@ -2878,7 +2879,7 @@
     (tags diode)
     (path /5C1926AD)
     (attr smd)
-    (fp_text reference D2 (at 2.0697 10.7298) (layer F.SilkS)
+    (fp_text reference D2 (at -1.6383 -11.0109) (layer F.SilkS)
       (effects (font (size 0.5 0.5) (thickness 0.08)))
     )
     (fp_text value LED (at 0 1.43) (layer F.Fab)
